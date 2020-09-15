@@ -16,12 +16,22 @@
     }
 }
 
-@media (min-width: 1600px) {}
+@media (min-width: 1600px) {
+    .container {
+        width: 1600px !important;
+    }
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    background: #E8E9EA;
+}
 
 .container {
     min-height: 100vh;
     padding: 0 0.5rem;
-    background: #E8E9EA;
+    width: 100%;
 }
 
 .main {

@@ -20,9 +20,11 @@ function Navbar() {
 
     return (
         <div className={styles.navbar}>
-            <button className={navItemsState.artigos ? styles.navItemActive : styles.navItem} onClick={() => handleNavigation("artigos")}> Artigos </button>
-            <button className={navItemsState.projetos ? styles.navItemActive : styles.navItem} onClick={() => handleNavigation("projetos")}> Projetos </button>
-            <button className={navItemsState.sobre ? styles.navItemActive : styles.navItem} onClick={() => handleNavigation("sobre")}> Sobre </button>
+            <div className={styles.navArea}>
+                <button className={navItemsState.artigos ? styles.navItemActive : styles.navItem} onClick={() => handleNavigation("artigos")}> Artigos </button>
+                <button className={navItemsState.projetos ? styles.navItemActive : styles.navItem} onClick={() => handleNavigation("projetos")}> Projetos </button>
+                <button className={navItemsState.sobre ? styles.navItemActive : styles.navItem} onClick={() => handleNavigation("sobre")}> Sobre </button>
+            </div>
         </div>
     )
 }

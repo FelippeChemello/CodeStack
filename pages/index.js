@@ -16,21 +16,23 @@ export default function Home() {
                 <title>Felippe Jaqson Chemello</title>
                 <link rel="icon" href="/profile.jpg" />
             </Head>
+            
+            <div className={styles.background}>
+                <Navbar />
 
-            <Navbar />
+                <div className={styles.container}>
+                    <div className = {styles.sidebar}>
+                        <Bio />
+                            
+                        <Contact />
 
-            <div className={styles.container}>
-                <div className = {styles.sidebar}>
-                    <Bio />
-                        
-                    <Contact />
+                        <Skill /> 
+                    </div>
 
-                    <Skill /> 
+                    <main className={styles.main}>
+                        <Catalog />
+                    </main>
                 </div>
-
-                <main className={styles.main}>
-                    <Catalog />
-                </main>
             </div>
         </>
     )
