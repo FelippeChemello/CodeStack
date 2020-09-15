@@ -14,7 +14,7 @@ function Skill({ language, percent }) {
                 language => {
                     if (language.percent > 5) return language.name
                 }
-            ).map(language => language.name).slice(0, 6))
+            ).map(language => language.name))
         })
     }, [])
 
@@ -24,7 +24,7 @@ function Skill({ language, percent }) {
                     Skills
             </h2>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', maxHeight: "120px", overflow: 'hidden' }}>
                 {languages.map(language => (
                     <img 
                         style={{
