@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { authToken } from '../../config/wakatime'
+const authToken = process.env.WAKATIME_TOKEN_AUTH
 
 export default async (request, response) => {
     do {
