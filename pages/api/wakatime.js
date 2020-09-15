@@ -1,4 +1,5 @@
 import axios from 'axios'
+import mock from './mock/wakatime'
 
 const authToken = process.env.WAKATIME_TOKEN_AUTH
 
@@ -15,5 +16,5 @@ export default async (request, response) => {
         )
     } while (wakatimeResponse.data.data.is_up_to_date == false)
 
-    response.send(wakatimeResponse.data.data)
+    response.json(wakatimeResponse.data.data || mock.data)
 }

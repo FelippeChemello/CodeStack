@@ -21,24 +21,10 @@ export default function Home() {
             <div className={styles.container}>
                 <div className = {styles.sidebar}>
                     <Bio />
-
-                    <TrackVisibility once>
-                        {({ isVisible }) => { 
-                            if (isVisible) {
-                                isContactVisible = true
-                                return <Contact />
-                            } else {
-                                isContactVisible = false;
-                            }
-                        }}
                         
-                    </TrackVisibility>
+                    <Contact />
 
-                    <TrackVisibility once>
-                        {({ isVisible }) => (isVisible && isContactVisible) ? 
-                        <Skill /> 
-                        : <> </> }
-                    </TrackVisibility>
+                    <Skill /> 
                 </div>
 
                 <main className={styles.main}>

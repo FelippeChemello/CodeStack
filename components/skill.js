@@ -7,7 +7,10 @@ function Skill() {
     const [languages, setLanguages] = useState([]);
 
     useEffect(() => {
-        axios.get('/api/wakatime').then(response => {
+        axios.get(
+            '/api/wakatime?mock=true', 
+            { params: { mock: true }}
+        ).then(response => {
             const languagesNotProcessed = response.data.languages
         
             setLanguages(languagesNotProcessed.filter(

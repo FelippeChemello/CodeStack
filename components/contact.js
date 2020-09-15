@@ -11,12 +11,17 @@ function Contact() {
 
             <div className = {styles.contactRow}>
                 <img src="/icons/linkedin.png" height="25px"/>
-                <a href = "https://www.linkedin.com/in/felippechemello/" className = {styles.contact}> Felippe Jaqson Chemello </a>
+                <a href="https://www.linkedin.com/in/felippechemello/" className={styles.contact}> Felippe Jaqson Chemello </a>
             </div>
 
             <div className = {styles.contactRow}>
                 <img src="/icons/github.png" height="25px"/>
-                <a href = "https://github.com/FelippeChemello" className = {styles.contact}> FelippeChemello </a>
+                <a href="https://github.com/FelippeChemello" className={styles.contact}> FelippeChemello </a>
+            </div>
+
+            <div className = {styles.contactRow}>
+                <img src="/icons/email.png" height="25px"/>
+                <a href="mailto:felippechemello@codestack.me" className={styles.contact}> felippechemello@codestack.me </a>
             </div>
         </div>
     )
