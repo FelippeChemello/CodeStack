@@ -1,3 +1,5 @@
+import React, {useState, useEffect} from 'react'
+import TrackVisibility from 'react-on-screen'
 import Head from 'next/head'
 
 import styles from '../styles/Home.module.css'
@@ -7,6 +9,8 @@ import Bio from '../components/bio'
 import Contact from '../components/contact'
 
 export default function Home() {
+    let isContactVisible = false;
+
     return (
         <>
             <Head>
@@ -18,9 +22,23 @@ export default function Home() {
                 <div className = {styles.sidebar}>
                     <Bio />
 
-                    <Contact />
+                    <TrackVisibility once>
+                        {({ isVisible }) => { 
+                            if (isVisible) {
+                                isContactVisible = true
+                                return <Contact />
+                            } else {
+                                isContactVisible = false;
+                            }
+                        }}
+                        
+                    </TrackVisibility>
 
-                    <Skill />
+                    <TrackVisibility once>
+                        {({ isVisible }) => (isVisible && isContactVisible) ? 
+                        <Skill /> 
+                        : <> </> }
+                    </TrackVisibility>
                 </div>
 
                 <main className={styles.main}>

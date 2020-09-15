@@ -4,7 +4,7 @@ import styles from '../styles/Contact.module.css'
 
 function Contact() {
     return (
-        <div className = {styles.sidebarContact}>
+        <div className={styles.sidebarContact} >
             <h2 className={styles.subtitle}>
                 Contatos
             </h2>

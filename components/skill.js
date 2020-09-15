@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import styles from '../styles/Skill.module.css';
 
-function Skill({ language, percent }) {
+function Skill() {
     const [languages, setLanguages] = useState([]);
 
     useEffect(() => {
@@ -12,19 +12,19 @@ function Skill({ language, percent }) {
         
             setLanguages(languagesNotProcessed.filter(
                 language => {
-                    if (language.percent > 5) return language.name
+                    if (language.percent > 1) return language.name
                 }
             ).map(language => language.name))
         })
     }, [])
 
     return (
-        <div className = {styles.sidebarSkills}>
+        <div className={styles.sidebarSkills} >
             <h2 className={styles.subtitle}>
                     Skills
             </h2>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', maxHeight: "120px", overflow: 'hidden' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', overflow: 'hidden' }}>
                 {languages.map(language => (
                     <img 
                         style={{
