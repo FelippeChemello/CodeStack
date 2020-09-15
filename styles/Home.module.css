@@ -10,8 +10,6 @@
         margin: 0 73px;
         width: 30%;
         max-width: 370px;
-        height: 100vh;
-        overflow: hidden;
         display: flex;
         flex-direction: column;
     }
