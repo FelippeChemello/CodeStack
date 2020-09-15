@@ -10,9 +10,13 @@
   "dependencies": {
     "axios": "^0.20.0",
     "canvasjs-react-charts": "^1.0.5",
+    "marked": "^1.1.1",
     "next": "9.5.3",
+    "node-postgres": "^0.6.2",
+    "pg": "^8.3.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-on-screen": "^2.1.1"
+    "react-on-screen": "^2.1.1",
+    "sequelize": "^6.3.5"
   }
 }

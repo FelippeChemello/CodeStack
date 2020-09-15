@@ -8,8 +8,7 @@ function Skill() {
 
     useEffect(() => {
         axios.get(
-            '/api/wakatime?mock=true', 
-            { params: { mock: true }}
+            '/api/wakatime'
         ).then(response => {
             const languagesNotProcessed = response.data.languages
         

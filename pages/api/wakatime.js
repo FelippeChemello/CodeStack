@@ -16,5 +16,8 @@ export default async (request, response) => {
         )
     } while (wakatimeResponse.data.data.is_up_to_date == false)
 
-    response.json(wakatimeResponse.data.data || mock.data)
+    response.json(
+        wakatimeResponse.data.data || 
+        mock.data
+    )
 }
