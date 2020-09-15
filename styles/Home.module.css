@@ -13,64 +13,6 @@
         height: 100vh;
         overflow: hidden;
     }
-    
-    .sidebarBio {
-        display: flex;
-        padding: 30px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .sidebarContact {
-        padding: 30px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-        margin: 30px 0;
-    }
-
-    .sidebarSkills {
-        padding: 30px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-        margin: 30px 0;
-        height: 100%;
-    }
-}
-
-.profile {
-    width: 70%;
-    border-radius: 1000px;
-    margin-bottom: 37px;
-}
-
-.title {
-    margin: 0;
-    width: 100%;
-    font-size: 2rem;
-}
-
-.subtitle {
-    margin: 0;
-    width: 100%;
-    font-size: 1.5rem;
-}
-
-.description {
-    line-height: 1.5;
-    font-size: 1rem;
-    margin: 16px 0 0
-}
-
-.contactRow {
-    display: flex;
-    align-items: center;
-    margin: 15px 0 0 0;
-}
-
-.contactRow a {
-    margin: 0 5px
 }
 
 .container {

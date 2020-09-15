@@ -1,6 +1,10 @@
 import Head from 'next/head'
+
 import styles from '../styles/Home.module.css'
+
 import Skill from '../components/skill'
+import Bio from '../components/bio'
+import Contact from '../components/contact'
 
 export default function Home() {
     return (
@@ -12,51 +16,11 @@ export default function Home() {
 
             <div className={styles.container}>
                 <div className = {styles.sidebar}>
-                    <div className = {styles.sidebarBio}>
-                        <img src = "/profile.jpg" className = {styles.profile} /> 
-                        
-                        <h1 className={styles.title}> 
-                            FELIPPE JAQSON CHEMELLO
-                        </h1>
+                    <Bio />
 
-                        <p className={styles.description}>
-                            Sou desenvolvedor full-stack, atualmente trabalhando na KingHost.
-                            Estudante de Ciências da Computação.
-                            Entusiasta de Inteligência Artificial e Machine Learning.
-                        </p>
-                    </div>
+                    <Contact />
 
-                    <div className = {styles.sidebarContact}>
-                        <h2 className={styles.subtitle}>
-                            Contatos
-                        </h2>
-
-                        <div className = {styles.contactRow}>
-                            <img src="/icons/linkedin.png" height="25px"/>
-                            <a href = "https://www.linkedin.com/in/felippechemello/" className = {styles.contact}> Felippe Jaqson Chemello </a>
-                        </div>
-
-                        <div className = {styles.contactRow}>
-                            <img src="/icons/github.png" height="25px"/>
-                            <a href = "https://github.com/FelippeChemello" className = {styles.contact}> FelippeChemello </a>
-                        </div>
-                    </div>
-
-                    <div className = {styles.sidebarSkills}>
-                        <h2 className={styles.subtitle}>
-                            Skills 
-                        </h2>
-
-                        <div className = {styles.contactRow}>
-                            <img src="/icons/linkedin.png" height="25px"/>
-                            <a href = "https://www.linkedin.com/in/felippechemello/" className = {styles.contact}> Felippe Jaqson Chemello </a>
-                        </div>
-
-                        <div className = {styles.contactRow}>
-                            <img src="/icons/github.png" height="25px"/>
-                            <a href = "https://github.com/FelippeChemello" className = {styles.contact}> FelippeChemello </a>
-                        </div>
-                    </div>
+                    <Skill />
                 </div>
 
                 <main className={styles.main}>
