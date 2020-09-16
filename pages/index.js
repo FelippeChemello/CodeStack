@@ -29,7 +29,7 @@ export default function Home() {
         <>
             <Head>
                 <title>Felippe Jaqson Chemello</title>
-                <link rel="icon" href="/profile.jpg" />
+                <link rel="icon" href="/icons/codestack.png" />
             </Head>
             
             <div className={styles.background}>
