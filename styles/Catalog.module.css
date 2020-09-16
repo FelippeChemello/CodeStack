@@ -9,6 +9,8 @@
 
 .itemHeader {
     display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .icon {
@@ -93,4 +95,38 @@
 .badge {
     height: 32px;
     margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 37px;
+        padding: 20px;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon img{ 
+        display: none;
+    }
+
+    .title {
+        padding-left: 10px;
+    }
+
+    .description {
+        margin-left: calc(32px + 10px);
+    }
+
+    .image {
+        margin: 30px -20px 12px -20px;
+        height: 100px;
+    }
+
+    .badge {
+        height: 32px;
+        margin-left: 20px;
+    }
 }

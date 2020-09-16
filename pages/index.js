@@ -33,7 +33,7 @@ export default function Home() {
             </Head>
             
             <div className={styles.background}>
-                <Navbar navItemsState={navItemsState} setNavItemsState={setNavItemsState}/>
+                <Navbar position="Desktop" navItemsState={navItemsState} setNavItemsState={setNavItemsState}/>
 
                 <div className={styles.container}>
                     <div className = {styles.sidebar}>
@@ -43,6 +43,8 @@ export default function Home() {
 
                         <Skill /> 
                     </div>
+
+                    <Navbar position="Mobile" navItemsState={navItemsState} setNavItemsState={setNavItemsState}/>
 
                     <main className={styles.main}>
                         {navItemsState.articles || navItemsState.projects ? <Catalog type={getKeyNameWhereTrueValue(navItemsState)}/> : <> </>}
