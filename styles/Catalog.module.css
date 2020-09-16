@@ -118,6 +118,7 @@
 
     .description {
         margin-left: calc(32px + 10px);
+        font-weight: 400;
     }
 
     .image {
@@ -127,6 +128,6 @@
 
     .badge {
         height: 32px;
-        margin-left: 20px;
+        margin-left: 0px;
     }
 }
