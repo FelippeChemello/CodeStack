@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Head from 'next/head'
 
 import styles from '../styles/Home.module.css'
@@ -10,6 +10,21 @@ import Navbar from '../components/navbar'
 import Catalog from '../components/catalog'
 
 export default function Home() {
+    const [navItemsState, setNavItemsState] = useState({
+        projects: true,
+        articles: false,
+        about: false
+    })
+
+    function getKeyNameWhereTrueValue(json) {
+        for (let key in json) {
+            if (json[key] === true) {
+                console.log(key)
+                return key;
+            }
+        }
+    }
+
     return (
         <>
             <Head>
@@ -18,7 +33,7 @@ export default function Home() {
             </Head>
             
             <div className={styles.background}>
-                <Navbar />
+                <Navbar navItemsState={navItemsState} setNavItemsState={setNavItemsState}/>
 
                 <div className={styles.container}>
                     <div className = {styles.sidebar}>
@@ -30,7 +45,7 @@ export default function Home() {
                     </div>
 
                     <main className={styles.main}>
-                        <Catalog />
+                        {navItemsState.articles || navItemsState.projects ? <Catalog type={getKeyNameWhereTrueValue(navItemsState)}/> : <> </>}
                     </main>
                 </div>
             </div>

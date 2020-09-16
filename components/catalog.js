@@ -4,7 +4,7 @@ const marked = require('marked')
 
 import styles from '../styles/Catalog.module.css'
 
-function PortfolioItem() {
+function PortfolioItem({ type }) {
     const [isMinimized, setIsMinimized] = useState(true)
     const [items, setItems] = useState([])
 
@@ -36,8 +36,8 @@ function PortfolioItem() {
 
     return (
         <>
-            { items.map(item => { return(
-                <div className={styles.container}>
+            { items.map(item => { console.log(item); if (item.type === type.replace(/s$/, '')) return(
+                <div key={item.name} className={styles.container}>
                     <div className={styles.itemHeader}>
                         <div className={styles.icon}>
                             <img src={`${item.type}.png`} height={38}/>
