@@ -15,9 +15,10 @@ class MyDocument extends Document {
                         async
                         src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
                     ></script>
-                    <meta name='propeller' content='b2b4f8e0765fe19986f63477fd4c9e04'></meta>
                 </Head>
                 <body>
+                    <script src='https://www.paypal.com/sdk/js?client-id=AYB05EyKQya-xYDx2nFzAqoOyM1zCLqahE3udq5CDTO5HZDgc2GKXsakY48_cKuiXwghs8mqjJtYrmnc&currency=BRL'></script>
+
                     <Main />
                     <NextScript />
                 </body>
