@@ -1,3 +1,4 @@
+//
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { IconContext } from 'react-icons'
@@ -37,6 +38,11 @@ export default class MyDocument extends Document {
                         />
 
                         <link rel='manifest' href='/manifest.json' />
+
+                        <script
+                            type='text/javascript'
+                            src='newrelic.js'
+                        ></script>
                     </Head>
 
                     <body>
