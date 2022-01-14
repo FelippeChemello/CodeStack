@@ -177,20 +177,22 @@ export const NotionPage: React.FC<PageProps> = ({
                         shallow,
                         locale,
                         ...props
-                    }) => (
-                        <Link
-                            href={href}
-                            as={as}
-                            passHref={passHref}
-                            prefetch={prefetch}
-                            replace={replace}
-                            scroll={scroll}
-                            shallow={shallow}
-                            locale={locale}
-                        >
-                            <a {...props} />
-                        </Link>
-                    ),
+                    }) => {
+                        return (
+                            <Link
+                                href={`pages${href}`}
+                                as={as}
+                                passHref={passHref}
+                                prefetch={prefetch}
+                                replace={replace}
+                                scroll={scroll}
+                                shallow={shallow}
+                                locale={locale}
+                            >
+                                <a {...props} />
+                            </Link>
+                        )
+                    },
                     code: Code,
                     collection: Collection,
                     collectionRow: CollectionRow,
@@ -240,7 +242,7 @@ export const NotionPage: React.FC<PageProps> = ({
                                         onClick={() => routerPush('/')}
                                     >
                                         <img
-                                            src='logo.png'
+                                            src='/logo.png'
                                             style={{
                                                 width: '178px',
                                                 height: '40px',

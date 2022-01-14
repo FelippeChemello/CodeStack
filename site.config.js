@@ -17,11 +17,8 @@ module.exports = {
 
     // map of notion page IDs to URL paths (optional)
     // any pages defined here will override their default URL paths
-    // example:
-    //
-    // pageUrlOverrides: {
-    //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-    //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-    // }
-    pageUrlOverrides: {},
+    pageUrlOverrides: {
+        '/terms-and-conditions': '5562a6976ac144278a0e3b714de70c68',
+        '/privacy-policy': '6167948d042a47d4b6d37a2dfdcf43fb',
+    },
 }
