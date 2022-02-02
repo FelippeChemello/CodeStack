@@ -1,4 +1,11 @@
-import { Block, ExtendedRecordMap, PageMap, RecordMap } from 'notion-types'
+import { ReactNode } from 'react'
+import {
+    Block,
+    ExtendedRecordMap,
+    PageMap,
+    RecordMap,
+    BlockMap,
+} from 'notion-types'
 import { SearchNotion } from 'react-notion-x'
 
 export * from 'notion-types'
@@ -87,7 +94,7 @@ export type PreviewImageMap = {
 export type Breadcrumb = {
     active: boolean
     block: Block
-    icon: string //URL or EMOJI
+    icon: string // URL or EMOJI
     pageId: string
     title: string
 }

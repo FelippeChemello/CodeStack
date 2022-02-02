@@ -1,7 +1,5 @@
 import { NotionAPI } from 'notion-client'
 import { ExtendedRecordMap, SearchParams, SearchResults } from 'notion-types'
-import { mapNotionImageUrl } from './map-image-url'
-import pMap from 'p-map'
 
 export const notion = new NotionAPI({
     apiBaseUrl: process.env.NOTION_API_BASE_URL,
