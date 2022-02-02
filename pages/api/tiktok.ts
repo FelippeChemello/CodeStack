@@ -8,7 +8,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     let url = 'https://open-api.tiktok.com/platform/oauth/connect/'
     url += `?client_key=${process.env.TIKTOK_CLIENT_KEY}`
-    url += '&scope=user.info.basic'
+    url += '&scope=user.info.basic,video.upload'
     url += '&response_type=code'
     url += `&redirect_uri=${encodeURIComponent(
         'https://codestack.me/api/callback'
